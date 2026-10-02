@@ -1,0 +1,12 @@
+public class Solution {
+    public bool hasDuplicate(int[] nums) {
+        HashSet<int> uniqueNums = new HashSet<int>(nums.Length);
+        for(int i=0;i< nums.Length; i++){
+            if(uniqueNums.Contains(nums[i])){
+                return true;
+            }
+            uniqueNums.Add(nums[i]);
+        }
+        return false;
+    }
+}
